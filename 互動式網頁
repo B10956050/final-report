@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>B10956050互動式網頁期末專題</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->//最左專題名稱
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">關閉視窗</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>目錄</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">人物介紹</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">著名作品</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">評價及對後世的影響</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>互動式網頁期末報告</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+<!-- 第一個紅字部分 -->
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>海明威.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Ernest Miller Hemingway.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+<!-- 圖片 -->
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="images/海明威畫像.jpg" style="width:40%" onclick="onClick(this)" alt="海明威畫像">
+      <img src="images/年少時的海明威.jpg" style="width:50%" onclick="onClick(this)" alt="年少時的海明威">
+      <img src="images/寫作時的海明威.jpg" style="width:40%" onclick="onClick(this)" alt="寫作時的海明威">
+    </div>
+
+    <div class="w3-half">
+      <img src="images/海明威畫像.jpg" style="width:40%" onclick="onClick(this)" alt="海明威畫像">
+      <img src="images/年少時的海明威.jpg" style="width:50%" onclick="onClick(this)" alt="年少時的海明威">
+      <img src="images/寫作時的海明威.jpg" style="width:40%" onclick="onClick(this)" alt="寫作時的海明威">
+    </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<!-- 人物介紹 -->
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>人物介紹.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>美國、古巴記者和作家，他是20世紀最著名的小說家之一。海明威出生於美國伊利諾伊州芝加哥市郊區的奧克帕克，晚年在愛達荷州凱徹姆的家中自殺身亡。</p>
+    <p>海明威一生中的感情錯綜複雜，先後結過四次婚，是美國「迷失的一代」作家中的代表人物，作品中對人生、世界、社會都表現出了迷茫和彷徨。</p>
+    <p>1939年至1960年間，海明威在古巴定居，並稱自己為「普通的古巴人」。在這段期間海明威寫下了聞名於世的代表作《老人與海》。古巴革命成功以後，
+        海明威曾與古巴革命的領導人菲德爾·卡斯楚會面。2002年11月11日，卡斯楚更親自出席海明威故居博物館的落成儀式。</p>
+    <p>海明威一生中曾榮獲不少獎項。他在第一次世界大戰期間獲銀製勇敢勳章；1952年，他以《老人與海》一書獲得普立策獎；1954年，
+        《老人與海》又為海明威奪得諾貝爾文學獎。2001年，海明威的《妾似 朝陽又照君》與《戰地春夢》兩部作品被美國現代圖書館列入「20世紀百大英文小說」中。</p>
+    <p>海明威的寫作風格以簡潔著稱，對美國文學及20世紀文學的發展有極深遠的影響；他的很多作品至今仍極具影響力。</p>
+  </div>
+
+<!-- 著名作品 -->
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>著名作品.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>「最好的作品完成時必定是在你墜入情網時。」</p>
+    <p>海明威一直與批評家是水火不相容的，他說批評家就像相命術士說些空洞的話騙取一點稿費而已，他在1924年寫過一篇文章說，平均每一位美國名作家就有十一位
+        批評家靠批評這位名作家來出點風頭。他說，他不知道為什麼這些會批評的人不自己寫點像樣的東西給別人看，而老是以寄生蟲的心態寫些雜文或廢話。</p>
+    <p><b>海明威的著名作品：</b></p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/老人與海.jpg" alt="老人與海" style="width:100%">
+        <div class="w3-container">
+          <h3>老人與海</h3>
+          <p class="w3-opacity">The Old Man and the Sea.</p>
+          <p>《老人與海》改編自一個真實故事。1935年，一名老漁民告訴海明威自己曾經捕獵到一條大馬林魚，但是後來被鯊魚吃掉。海明威在1936年將這個故事寫成報導，
+                登在《君子雜誌》上。老漁民的這段傳奇經歷引起了海明威的重視，他決定把老漁民的經歷寫成小說介紹給讀者。</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/戰地春夢.jpg" alt="戰地春夢" style="width:100%">
+        <div class="w3-container">
+          <h3>戰地春夢</h3>
+          <p class="w3-opacity">A Farewell to Arms.</p>
+          <p>《戰地春夢》又名《永別了，武器》，是美國作家歐內斯特·海明威於1929年寫成的半自傳體小說。小說以第一次世界大戰中在義大利軍中作戰的美籍救護車司機中尉弗利德利克·亨利的角度進行敘事。
+                書名取自16世紀劇英國作家喬治·皮爾的一首詩。</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/太陽依舊升起.jpg" alt="太陽依舊升起" style="width:104%">
+        <div class="w3-container">
+          <h3>太陽依舊升起</h3>
+          <p class="w3-opacity">The Sun Also Rises.</p>
+          <p>《太陽依舊升起》又名《妾似朝陽又照君》，是美國諾貝爾文學獎得主厄尼斯特·海明威於1926年創作的小說，講述一群美國、英國僑民從巴黎旅行至西班牙的潘普洛納，觀賞當地聖費爾明節奔牛、鬥牛的故事。作為現代主義小說的先鋒和不朽名作，它自出版之日起就得到各式各樣的評價。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 評價及對後世的影響 -->
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>評價及對後世的影響.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>對海明威的評價可以從兩個方面來分析。首先是對海明威在精神領域成就的評價。海明威是一位美國人，他的愛國主義情懷表現得十分明顯，在愛國的同時，海明威對美國民眾還有著獨特的感情。海明威給美國民眾留下了很深刻的影響，他是美國人的榜樣。美國的一位總統曾對海明威的這種愛國情懷發表了高度的讚揚，
+        稱海明威的這種愛國思想帶給美國民眾的影響是非常深刻的。</p>
+    <p>其次是對海明威在文學領域成就的評價。海明威長期從事文學創作，因為內容深刻，給人啟發，獲得了諾貝爾文學獎。這個獎項是對海明威文學創作的一種肯定。在美國，海明威受到了讀者和文學家的高度讚揚。海明威的作品有自己獨特的創新，他敢於拋棄傳統，創造新穎的題材，在這樣的背景下，海明威創作出的
+        各種人物都深深地影響了美國一代又一代的人。海明威身上的愛國精神在文章中同樣可以體現出來。</p>
+    <p>總之對海明威的評價最多的就是他是一位成功的作家，他所創作的每部作品都能吸引很多的讀者，而且能給讀者留下很深刻的印象。海明威這種獨特的風格讓他的作品具有一種神秘且優雅的感覺。因此，海明威被美國評為是最有成就的一位作家。在海明威的作品中，仿佛有一股無形的力量在鞭策著讀者成為一個硬漢。
+        這就是海明威作品的獨特之處，海明威也因此受到了很高的評價。</p>
+    </div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
